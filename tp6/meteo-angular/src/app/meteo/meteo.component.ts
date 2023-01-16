@@ -26,6 +26,8 @@ export class MeteoComponent implements OnInit {
       this.cityList = [];
     }
 
+    this.city.name = 'toto'
+
   }
   onSubmit() {
 
@@ -66,6 +68,7 @@ export class MeteoComponent implements OnInit {
   saveCityList() {
     localStorage['cityList'] = JSON.stringify(this.cityList);
   }
+  
 }
 
 
