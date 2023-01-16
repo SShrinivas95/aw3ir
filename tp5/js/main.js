@@ -29,6 +29,7 @@ window.onload = function () {
         // https://vuejs.org/v2/guide/instance.html#Lifecycle-Diagram
         mounted: function () {
             this.loaded = true;
+            document.getElementById('weatherApp').classList.remove('hidden')
             this.readData();
         },
 

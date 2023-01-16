@@ -13,10 +13,10 @@
 <body>
 
     
-    <div id="weatherApp">
+    <div class="hidden" id="weatherApp">
         <H1>TP5 </H1>
         <br>
-        <form v-on:submit="addCity">
+        <form v-on:submit="addCity" >
             <div class="input-group">
                 <input type="search" class="form-control" v-model="formCityName" placeholder="Search for..."
                     aria-label="Search for..." autofocus required>

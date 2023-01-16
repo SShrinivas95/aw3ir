@@ -1,8 +1,15 @@
 #weatherApp {
     margin-left:5% ;
     margin-right: 5%;
+    transition: 3s;
+    opacity: 1;
 }
 #test , .form-control{
     border: solid 1px;
     
+}
+#weatherApp.hidden{
+    opacity:0;
+    
+    transition: 3s;
 }
