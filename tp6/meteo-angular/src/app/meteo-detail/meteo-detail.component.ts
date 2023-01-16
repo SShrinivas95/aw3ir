@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import {MeteoService} from '../services/meteo.service'
-import { DatePipe } from '@angular/common';
+
 
 
 
@@ -13,7 +13,8 @@ import { DatePipe } from '@angular/common';
 })
 export class MeteoDetailComponent {
 
-  meteo : any;
+  // meteo : any;
+  hourly : any;
 
   constructor(
     private route: ActivatedRoute,
@@ -34,8 +35,8 @@ export class MeteoDetailComponent {
     if(name)
     {
       this.meteoService.getMeteo(name)
-      .then(response => this.meteo = response)
-      .catch(fail => this.meteo = fail);
+      .then(response => this.hourly = response)
+      .catch(fail => this.hourly = fail);
     }
   }
 
