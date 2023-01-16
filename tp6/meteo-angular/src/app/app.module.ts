@@ -13,11 +13,11 @@ const approutes: Routes = [
   { 
     path: 'meteo/:name',  // la page  affichant la météo prendra comme paramètre 'name'
     component: MeteoDetailComponent }, // Ce component fera l'appel AJAX et afficher les données reçues par openWeatherMap
-  {
-    path: '', // un chemin vide renverra vers '/'
-    redirectTo: '/',
-    pathMatch: 'full'
-  },
+  // {
+  //   path: '', // un chemin vide renverra vers '/'
+  //   redirectTo: '/',
+  //   pathMatch: 'full'
+  // },
   {
     path: '', // la page principale utilisera le component suivant
     component: MeteoComponent
