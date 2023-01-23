@@ -13,19 +13,19 @@
         alt="Card image cap">
         <ul class="list-group list-group-flush">
         <li class="list-group-item">
-          <i class="wi wi-sunrise"></i> Levé du soleil: {{hourly.city.sunrise* 1000 | date:'mediumDate' }}  {{hourly.city.sunrise* 1000 | date: 'shortTime'}}
+          <i class="wi wi-sunrise"></i> Levé du soleil: {{hourly.city.sunrise* 1000 | date : 'dd/MM/yy, à HH:mm' }}
         </li>
         <li class="list-group-item">
-          <i class="wi wi-sunset"></i>Couché du soleil: {{hourly.city.sunset* 1000 | date:'mediumDate' }} {{hourly.city.sunset* 1000 | date: 'shortTime'}}
+          <i class="wi wi-sunset"></i>Couché du soleil: {{hourly.city.sunset* 1000 | date : 'dd/MM/yy, à HH:mm' }}
         </li>
       </ul> 
   </div>
-    <div class="card" style="width:300px; margin: 0 auto" *ngFor="let meteo of hourly.list">
-      <div class="card-header">
-        @ {{meteo.dt* 1000 | date:'mediumDate'}} {{meteo.dt* 1000 | date:'shortTime'}} 
+    <div class="card" style="width:300px; margin: 0 auto" *ngFor="let meteo of hourly1">
+      <div class="card-header" >
+        @{{meteo.dt* 1000 |date : 'dd/MM/yy, à HH:mm' }} 
       </div>
       
-      <div class="card-body">
+      <div class="card-body"  >
         <h5 class="card-title">
           <i v-bind:class="'wi wi-owm-day-'+meteo.weather[0].id"></i>
           {{meteo.main.temp}}
@@ -33,7 +33,7 @@
         </h5>
         <p class="card-text">{{meteo.weather[0].description}}</p>
       </div>
-      <ul class="list-group list-group-flush">
+      <ul class="list-group list-group-flush"  >
         <li class="list-group-item">
           <i class="wi wi-cloud"></i> Nuage: {{meteo.clouds.all}}%
         </li>
